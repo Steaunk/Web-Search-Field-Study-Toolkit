@@ -14,6 +14,7 @@ import datetime
 
 @csrf_exempt
 def check(request):
+    print(request.POST)
     if request.method == 'POST':
         username = request.POST.get('username')
         password = request.POST.get('password')

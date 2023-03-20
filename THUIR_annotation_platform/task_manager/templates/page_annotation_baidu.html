@@ -1,4 +1,5 @@
 {{ html | safe }}
+{% load i18n %}
 <script>
 
     var content_left = $("#content_left").children();
@@ -21,18 +22,18 @@
     content_right.empty();
     document.getElementById("kw").setAttribute('value', "{{ query}}");
 
-    content_right.append("<div style='width: 540px'><b>1. The left side of the page is the search results, please drag the results you think are helpful in the search process to the corresponding position on the right side according to their usefulness; For results that you haven't seen or that you don't think will help you at all, you don't need to drag. To help you recall the search process, we've highlighted the results you clicked on below the results, but that doesn't mean you have to drag them.)</b></div><br />");
+    content_right.append("<div style='width: 540px'><b>{% trans "1. The left side of the page is the search results, please drag the results you think are helpful in the search process to the corresponding position on the right side according to their usefulness; For results that you haven't seen or that you don't think will help you at all, you don't need to drag. To help you recall the search process, we've highlighted the results you clicked on below the results, but that doesn't mean you have to drag them." %}</b></div><br />");
     for (var i = 3; i > 0; i--) {
         var usefulness = "";
         switch (i) {
             case 3:
-                usefulness = "<div class='usefulness' id='serendipity' style='height: auto; width: 540px; border:1px dashed #000; border-radius:10px' draggable='true'>Please drag the results that you think would be very helpful and bring you surprise here.</div><br /><br />";
+                usefulness = "<div class='usefulness' id='serendipity' style='height: auto; width: 540px; border:1px dashed #000; border-radius:10px' draggable='true'>{% trans "Please drag the results that you think would be very helpful and bring you surprise here." %}</div><br /><br />";
                 break;
             case 2:
-                usefulness = "<div class='usefulness' id='usefulness_2' style='height: auto; width: 540px; border:1px dashed #000; border-radius:10px' draggable='true'>Please drag the results that you think would be very helpful here.</div><br /><br />";
+                usefulness = "<div class='usefulness' id='usefulness_2' style='height: auto; width: 540px; border:1px dashed #000; border-radius:10px' draggable='true'>{% trans "Please drag the results that you think would be very helpful here." %}</div><br /><br />";
                 break;
             case 1:
-                usefulness = "<div class='usefulness' id='usefulness_1' style='height: auto; width: 540px; border:1px dashed #000; border-radius:10px' draggable='true'>Plaese drag the results here that you think are partially helpful here.</div><br /><br />";
+                usefulness = "<div class='usefulness' id='usefulness_1' style='height: auto; width: 540px; border:1px dashed #000; border-radius:10px' draggable='true'>{% trans "Plaese drag the results here that you think are partially helpful here." %}</div><br /><br />";
                 break;
             default:
                 break;
@@ -40,7 +41,7 @@
         content_right.append(usefulness);
     }
 
-    content_right.append("<div class='col-xs-12'><div id='page-btn' class='col-xs-6' style='border: 1px solid transparent;border-radius: 10px;font-size: 13px;padding: 6px 12px;text-align: center;color: #fff;background-color: #1abc9c;border-color: #1abc9c'>Submit</div></div>");
+    content_right.append("<div class='col-xs-12'><div id='page-btn' class='col-xs-6' style='border: 1px solid transparent;border-radius: 10px;font-size: 13px;padding: 6px 12px;text-align: center;color: #fff;background-color: #1abc9c;border-color: #1abc9c'>{% trans "Submit" %}</div></div>");
 
     var dragElement = null;
     for (var i = 0; i < content_left.length; i++) {

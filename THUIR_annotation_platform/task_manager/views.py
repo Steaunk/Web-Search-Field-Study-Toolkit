@@ -172,7 +172,7 @@ def pre_query_annotation(user, request, timestamp):
         # print diversity, habit, redundancy, difficulty, gain, effort
 
         new_query = Query()
-        new_query.task_annotation = TaskAnnotation.objects.filter(annotation_status=True)[0]
+        # new_query.task_annotation = TaskAnnotation.objects.filter(annotation_status=True)[0]
         new_query.partition_status = False
         new_query.annotation_status = False
         new_query.life_start = int(time.time())
@@ -242,7 +242,6 @@ def query_annotation(user, request, task_id):
                 query.save()
             query__annotation.save()
         return HttpResponseRedirect('/task/task_annotation2/'+str(task_id))
-
     return render(
         request,
         'query_annotation.html',

@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load i18n %}
 {% block title %} Login  {% endblock %}
 
 {% block content %}
@@ -31,9 +32,9 @@
         </div>
         {% endif %}
 
-        <a id="login_button" class="btn btn-primary btn-lg btn-block" href="#">Login</a>
-        <a class="login-link" href="/user/forget_password/">Forget password?</a>
-        <a class="login-link" href="/user/signup/">Create a new account</a>
+        <a id="login_button" class="btn btn-primary btn-lg btn-block" href="#">{% trans "Login" %}</a>
+        <a class="login-link" href="/user/forget_password/">{% trans "Forget password?" %}</a>
+        <a class="login-link" href="/user/signup/">{% trans "Create a new account" %}</a>
     </form>
 </div>
 </div>

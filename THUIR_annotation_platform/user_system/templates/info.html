@@ -1,17 +1,17 @@
-{% extends "base.html" %}
-{% block title %} User Info  {% endblock %}
+{% extends "base.html" %} {% load i18n %}
+{% block title %} User Info {% endblock %}
 
 {% block content %}
-    <div class="row text-center">
-        <h3>
-            User Info
-        </h3>
-    </div>
-    <div class="row">
+<div class="row text-center">
+    <h3>
+        {% trans "User Info" %}
+    </h3>
+</div>
+<div class="row">
     <div class="col-xs-offset-3 col-xs-6 user_info">
         <div class="user_info_row row">
             <div class="info_label col-xs-offset-0 col-xs-6">
-                Username:
+                {% trans "Username" %}:
             </div>
             <div class="info_value col-xs-offest-6 col-xs-6">
                 {{ cur_user.username }}
@@ -19,7 +19,7 @@
         </div>
         <div class="user_info_row row">
             <div class="info_label col-xs-offset-0 col-xs-6">
-                Name:
+                {% trans "Name" %}:
             </div>
             <div class="info_value col-xs-offest-6 col-xs-6">
                 {{ cur_user.name }}
@@ -27,7 +27,7 @@
         </div>
         <div class="user_info_row row">
             <div class="info_label col-xs-offset-0 col-xs-6">
-                Gender:
+                {% trans "Gender" %}:
             </div>
             <div class="info_value col-xs-offest-6 col-xs-6">
                 {{ cur_user.sex }}
@@ -35,7 +35,7 @@
         </div>
         <div class="user_info_row row">
             <div class="info_label col-xs-offset-0 col-xs-6">
-                Age:
+                {% trans "Age" %}:
             </div>
             <div class="info_value col-xs-offest-6 col-xs-6">
                 {{ cur_user.age }}
@@ -43,7 +43,7 @@
         </div>
         <div class="user_info_row row">
             <div class="info_label col-xs-offset-0 col-xs-6">
-                Phone Number:
+                {% trans "Phone Number" %}:
             </div>
             <div class="info_value col-xs-offest-6 col-xs-6">
                 {{ cur_user.phone }}
@@ -51,7 +51,7 @@
         </div>
         <div class="user_info_row row">
             <div class="info_label col-xs-offset-0 col-xs-6">
-                E-mail Address:
+                {% trans "E-mail Address" %}:
             </div>
             <div class="info_value col-xs-offest-6 col-xs-6">
                 {{ cur_user.email }}
@@ -59,7 +59,7 @@
         </div>
         <div class="user_info_row row">
             <div class="info_label col-xs-offset-0 col-xs-6">
-                Occupation:
+                {% trans "Occupation" %}:
             </div>
             <div class="info_value col-xs-offest-6 col-xs-6">
                 {{ cur_user.field }}
@@ -67,7 +67,7 @@
         </div>
         <div class="user_info_row row">
             <div class="info_label col-xs-offset-0 col-xs-6">
-                How often do you use search engines:
+                {% trans "How often do you use search engines" %}:
             </div>
             <div class="info_value col-xs-offest-6 col-xs-6">
                 {{ search_frequency }}
@@ -75,7 +75,7 @@
         </div>
         <div class="user_info_row row">
             <div class="info_label col-xs-offset-0 col-xs-6">
-                How long have you been using search engiens:
+                {% trans "How long have you been using search engiens" %}:
             </div>
             <div class="info_value col-xs-offest-6 col-xs-6">
                 {{ search_history }}
@@ -83,14 +83,12 @@
         </div>
         <div class="row">
             <div class="col-xs-6">
-                <a href="/user/edit_info/" class="btn btn-block btn-lg btn-primary">Edit Personal Info</a>
+                <a href="/user/edit_info/" class="btn btn-block btn-lg btn-primary">{% trans "Edit Personal Info" %}</a>
             </div>
             <div class="col-xs-6">
-                <a href="/user/edit_password/" class="btn btn-block btn-lg btn-primary">Edit Password</a>
+                <a href="/user/edit_password/" class="btn btn-block btn-lg btn-primary">{% trans "Edit Password" %}</a>
             </div>
         </div>
     </div>
-    </div>
+</div>
 {% endblock %}
-
-

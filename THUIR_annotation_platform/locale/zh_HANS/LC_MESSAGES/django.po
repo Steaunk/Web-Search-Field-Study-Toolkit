@@ -1,0 +1,972 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-16 21:59+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: annotation_platform/settings.py:101
+msgid "English"
+msgstr "英语"
+
+#: annotation_platform/settings.py:102
+msgid "Simplified Chinese"
+msgstr "简体中文"
+
+#: task_manager/templates/annotation_home.html:8
+msgid "Annotation Task"
+msgstr "标注任务"
+
+#: task_manager/templates/annotation_home.html:14
+msgid "Uncompleted Tasks"
+msgstr "未完成的任务"
+
+#: task_manager/templates/annotation_home.html:19
+msgid "Go to Annotate"
+msgstr "前往标注"
+
+#: task_manager/templates/annotation_home.html:19
+#: task_manager/templates/annotation_home.html:35
+#: task_manager/templates/task_partition.html:54
+msgid "Task ID"
+msgstr "任务 ID"
+
+#: task_manager/templates/annotation_home.html:31
+msgid "Completed Tasks"
+msgstr "已完成的任务"
+
+#: task_manager/templates/page_annotation_baidu.html:25
+msgid ""
+"1. The left side of the page is the search results, please drag the results "
+"you think are helpful in the search process to the corresponding position on "
+"the right side according to their usefulness; For results that you haven't "
+"seen or that you don't think will help you at all, you don't need to drag. "
+"To help you recall the search process, we've highlighted the results you "
+"clicked on below the results, but that doesn't mean you have to drag them."
+msgstr ""
+"1. 单击链接后，搜索结果会显示在页面的左侧。请根据它们在搜索过程中的实用性将您"
+"认为有帮助的结果拖到右侧相应的位置；对于您没有看到或者认为对您没有帮助的结"
+"果，您无需拖动。为了帮助您回忆搜索内容，我们会在结果下方突出显示您单击的结"
+"果，但这并不意味着您必须将它们拖动。"
+
+#: task_manager/templates/page_annotation_baidu.html:30
+msgid ""
+"Please drag the results that you think would be very helpful and bring you "
+"surprise here."
+msgstr "请将你认为非常有帮助且超出你预期的结果拖到此处"
+
+#: task_manager/templates/page_annotation_baidu.html:33
+msgid "Please drag the results that you think would be very helpful here."
+msgstr "请将你认为非常有帮助的结果拖到此处"
+
+#: task_manager/templates/page_annotation_baidu.html:36
+msgid "Plaese drag the results here that you think are partially helpful here."
+msgstr "请将你认为有部分帮助的结果拖到此处"
+
+#: task_manager/templates/page_annotation_baidu.html:44
+#: task_manager/templates/pre_query_annotation.html:106
+#: task_manager/templates/query_annotation.html:274
+#: task_manager/templates/task_annotation1.html:121
+#: task_manager/templates/task_annotation2.html:76
+#: user_system/templates/edit_info.html:62
+#: user_system/templates/edit_password.html:36
+msgid "Submit"
+msgstr "提交"
+
+#: task_manager/templates/pre_query_annotation.html:8
+msgid "Please annotation the expectations for this query as follows"
+msgstr "请按照以下方式标注此查询的期望"
+
+#: task_manager/templates/pre_query_annotation.html:17
+msgid "Diversity"
+msgstr "多样性"
+
+#: task_manager/templates/pre_query_annotation.html:17
+msgid ""
+"How many topics do you expect the results of this query to include? (For "
+"example, if you search for 'COVID-19', you want to know the latest data on "
+"COVID-19 and the latest policies on COVID-19, and you expect the search "
+"engine to return results related to both topics.)"
+msgstr ""
+"您希望此查询结果包含多少个主题？（例如，如果您搜索“COVID-19”，您想了解"
+"COVID-19的最新数据和最新政策，并且您期望搜索引擎返回与这两个主题相关的结"
+"果。）"
+
+#: task_manager/templates/pre_query_annotation.html:19
+#: task_manager/templates/query_annotation.html:161
+msgid "One topic"
+msgstr "一个主题"
+
+#: task_manager/templates/pre_query_annotation.html:22
+msgid "Five or more (Current choice"
+msgstr "5个或更多（当前选择"
+
+#: task_manager/templates/pre_query_annotation.html:22
+#: task_manager/templates/pre_query_annotation.html:86
+msgid ")"
+msgstr "）"
+
+#: task_manager/templates/pre_query_annotation.html:31
+#: task_manager/templates/query_annotation.html:177
+msgid "Result Type"
+msgstr "结果类型"
+
+#: task_manager/templates/pre_query_annotation.html:32
+msgid ""
+"Which of the following result types do you expect to be returned by this "
+"query? (Multiple options)"
+msgstr "您期望此查询返回以下哪些类型的结果？（多选）"
+
+#: task_manager/templates/pre_query_annotation.html:34
+#: task_manager/templates/query_annotation.html:179
+msgid "Wikipedia type"
+msgstr "维基百科类型"
+
+#: task_manager/templates/pre_query_annotation.html:35
+#: task_manager/templates/query_annotation.html:180
+msgid "Image type"
+msgstr "图像类型"
+
+#: task_manager/templates/pre_query_annotation.html:36
+#: task_manager/templates/query_annotation.html:181
+msgid "Video type"
+msgstr "视频类型"
+
+#: task_manager/templates/pre_query_annotation.html:37
+#: task_manager/templates/query_annotation.html:182
+msgid "Experience type"
+msgstr "体验类型"
+
+#: task_manager/templates/pre_query_annotation.html:39
+#: task_manager/templates/query_annotation.html:183
+msgid "Map type"
+msgstr "地图类型"
+
+#: task_manager/templates/pre_query_annotation.html:40
+#: task_manager/templates/query_annotation.html:184
+msgid "Aggregated type"
+msgstr "聚合类型"
+
+#: task_manager/templates/pre_query_annotation.html:41
+#: task_manager/templates/query_annotation.html:185
+msgid "Card type"
+msgstr "卡片类型"
+
+#: task_manager/templates/pre_query_annotation.html:42
+#: task_manager/templates/query_annotation.html:65
+#: task_manager/templates/query_annotation.html:117
+#: task_manager/templates/query_annotation.html:186
+msgid "Others"
+msgstr "其他"
+
+#: task_manager/templates/pre_query_annotation.html:45
+msgid "3. <b>Redundancy</b>: How do you expect the redundancy of the results？"
+msgstr "3. <b>冗余性</b>：您期望结果的冗余程度如何？"
+
+#: task_manager/templates/pre_query_annotation.html:47
+msgid "0：All similar"
+msgstr "0：全部相似"
+
+#: task_manager/templates/pre_query_annotation.html:48
+msgid "1：Minority of the results are different"
+msgstr "1：少数结果不同"
+
+#: task_manager/templates/pre_query_annotation.html:49
+msgid "2：Half of the results is different"
+msgstr "2：一半结果不同"
+
+#: task_manager/templates/pre_query_annotation.html:50
+msgid "3：Majority of the results are different"
+msgstr "3：大多数结果不同"
+
+#: task_manager/templates/pre_query_annotation.html:51
+msgid "4：All results are different"
+msgstr "4：全部结果不同"
+
+#: task_manager/templates/pre_query_annotation.html:53
+msgid ""
+"4. <b>Difficulty</b>: How do you expect the difficulty of the search "
+"process？"
+msgstr "4. <b>难度</b>：您期望搜索过程的难度如何？"
+
+#: task_manager/templates/pre_query_annotation.html:55
+msgid "0：Very easy"
+msgstr "0：非常容易"
+
+#: task_manager/templates/pre_query_annotation.html:56
+msgid "1：Easy"
+msgstr "1：容易"
+
+#: task_manager/templates/pre_query_annotation.html:57
+msgid "2：A little bit difficult"
+msgstr "2：有一点困难"
+
+#: task_manager/templates/pre_query_annotation.html:58
+msgid "3：Difficult"
+msgstr "3：困难"
+
+#: task_manager/templates/pre_query_annotation.html:59
+msgid "4：Very difficult"
+msgstr "4：非常困难"
+
+#: task_manager/templates/pre_query_annotation.html:61
+msgid ""
+"5. <b>Number of relevant results</b>: How many relevant results do you "
+"expect to find in this query? (If you want to search for weather in Beijing "
+"today, for example, you might expect to find only one relevant result; And "
+"if you want to search for places for an autumn trip in Beijing, you might "
+"expect to find four or five relevant results.)"
+msgstr ""
+"5. <b>相关结果数量</b>: 您期望在此查询中找到多少相关结果？（例如，如果您想搜"
+"索今天北京的天气，您可能只期望找到一个相关结果；而如果您想搜索北京秋季旅行的"
+"景点，您可能期望找到四五个相关结果。）"
+
+#: task_manager/templates/pre_query_annotation.html:63
+#: task_manager/templates/query_annotation.html:227
+msgid "One relevant result"
+msgstr "一个相关结果"
+
+#: task_manager/templates/pre_query_annotation.html:65
+#: task_manager/templates/query_annotation.html:229
+msgid "Ten or more (Current choice"
+msgstr "10个或更多（当前选择"
+
+#: task_manager/templates/pre_query_annotation.html:66
+msgid "}"
+msgstr "}"
+
+#: task_manager/templates/pre_query_annotation.html:81
+msgid ""
+"6. <b>Effort</b>: How much time do you expect to spend searching for "
+"relevant information in this query? (Note that the time you spend finding "
+"the relevant information and using it to complete your task is not included. "
+"For example, if you want to watch a movie, the time you spend watching a "
+"movie after finding the movie is not included.)"
+msgstr ""
+"6. <b>搜索时间</b>: 您期望在此查询中花费多少时间寻找相关信息？（请注意，您花"
+"费的时间寻找相关信息并使用它完成任务的时间不包括在内。例如，如果您想观看一部"
+"电影，您找到电影后观看电影的时间不包括在内。）"
+
+#: task_manager/templates/pre_query_annotation.html:83
+#: task_manager/templates/query_annotation.html:248
+msgid "One minute"
+msgstr "1分钟"
+
+#: task_manager/templates/pre_query_annotation.html:85
+msgid "Ten minutes or longer (Current choice"
+msgstr "十分钟或更长时间（当前选择"
+
+#: task_manager/templates/query_annotation.html:8
+msgid "Please annotate each query for following questions:"
+msgstr "请针对以下问题为每个查询进行标注："
+
+#: task_manager/templates/query_annotation.html:19
+msgid "Query Text:"
+msgstr "查询文本："
+
+#: task_manager/templates/query_annotation.html:22
+#: task_manager/templates/query_annotation.html:131
+#: task_manager/templates/task_annotation1.html:20
+#: task_manager/templates/task_annotation2.html:26
+msgid "Page"
+msgstr "页面"
+
+#: task_manager/templates/query_annotation.html:23
+msgid "(Click here to )"
+msgstr "（点击此处）"
+
+#: task_manager/templates/query_annotation.html:28
+msgid "1. The relationship between the current query B"
+msgstr "1. 当前查询B与上一次查询A的关系"
+
+#: task_manager/templates/query_annotation.html:29
+msgid "and the last query A"
+msgstr "以及上一次查询A"
+
+#: task_manager/templates/query_annotation.html:29
+msgid "is"
+msgstr "是"
+
+#: task_manager/templates/query_annotation.html:32
+msgid "This is the first query."
+msgstr "这是第一次查询。"
+
+#: task_manager/templates/query_annotation.html:35
+msgid ""
+"Add requirement, i.e., more specific, B is a particular case of A, e.g., A:"
+msgstr "添加要求，即更具体，B是A的一个特例，例如，A:"
+
+#: task_manager/templates/query_annotation.html:35
+#: task_manager/templates/query_annotation.html:39
+msgid "HUAWEI Phone"
+msgstr "华为手机"
+
+#: task_manager/templates/query_annotation.html:35
+#: task_manager/templates/query_annotation.html:39
+#: task_manager/templates/query_annotation.html:44
+#: task_manager/templates/query_annotation.html:45
+#: task_manager/templates/query_annotation.html:49
+#: task_manager/templates/query_annotation.html:53
+#: task_manager/templates/query_annotation.html:54
+#: task_manager/templates/query_annotation.html:58
+#: task_manager/templates/query_annotation.html:63
+msgid "vs B:"
+msgstr "与 B:"
+
+#: task_manager/templates/query_annotation.html:35
+#: task_manager/templates/query_annotation.html:39
+#: task_manager/templates/query_annotation.html:44
+#: task_manager/templates/query_annotation.html:45
+#: task_manager/templates/query_annotation.html:49
+#: task_manager/templates/query_annotation.html:58
+msgid "HUAWEI p40"
+msgstr "华为P40"
+
+#: task_manager/templates/query_annotation.html:38
+msgid ""
+"Delete requirement, i.e., more generalize, A is a particular case of B, e."
+"g., A:"
+msgstr "删除要求，即更一般化，A是B的一个特殊情况，例如，A:"
+
+#: task_manager/templates/query_annotation.html:44
+msgid "B is an attribute or a component of A, e.g., A:"
+msgstr "B是A的属性或组成部分，例如，A:"
+
+#: task_manager/templates/query_annotation.html:44
+#: task_manager/templates/query_annotation.html:48
+msgid "HUAWEI p40 spec"
+msgstr "华为P40规格"
+
+#: task_manager/templates/query_annotation.html:45
+#: task_manager/templates/query_annotation.html:49
+#: task_manager/templates/query_annotation.html:53
+msgid "；A:"
+msgstr "；A:"
+
+#: task_manager/templates/query_annotation.html:45
+#: task_manager/templates/query_annotation.html:49
+msgid "HUAWEI p40 screen"
+msgstr "华为P40屏幕"
+
+#: task_manager/templates/query_annotation.html:48
+msgid "A is an attribute or a component of B, e.g., A:"
+msgstr "A是B的属性或组成部分，例如，A:"
+
+#: task_manager/templates/query_annotation.html:52
+msgid "The same search target, rephrase/synonym/spelling correction, e.g., A:"
+msgstr "相同的搜索目标，重新表述/同义词/拼写更正，例如，A:"
+
+#: task_manager/templates/query_annotation.html:52
+msgid "Haidian housing price"
+msgstr "海淀房价"
+
+#: task_manager/templates/query_annotation.html:53
+msgid "Haidian District housing price"
+msgstr "海淀区房价"
+
+#: task_manager/templates/query_annotation.html:53
+msgid "Massachusetts Institute of Technology"
+msgstr "麻省理工学院"
+
+#: task_manager/templates/query_annotation.html:54
+msgid "MIT"
+msgstr "麻省理工"
+
+#: task_manager/templates/query_annotation.html:57
+msgid ""
+"There is no hypotaxis between A and B, but there is relationship, e.g, A:"
+msgstr "A和B之间没有层级关系，但是有关系，例如，A:"
+
+#: task_manager/templates/query_annotation.html:58
+msgid "Xiaomi 10"
+msgstr "小米10"
+
+#: task_manager/templates/query_annotation.html:59
+msgid "if you want to search for mobile phone brands."
+msgstr "如果你想搜索手机品牌。"
+
+#: task_manager/templates/query_annotation.html:62
+msgid "A and B is completely irrelevant, e.g., A:"
+msgstr "A和B完全无关，例如，A:"
+
+#: task_manager/templates/query_annotation.html:62
+msgid "salmon"
+msgstr "鲑鱼"
+
+#: task_manager/templates/query_annotation.html:63
+msgid "robot"
+msgstr "机器人"
+
+#: task_manager/templates/query_annotation.html:73
+msgid "2. Where is the reformulation inspiration from?"
+msgstr "2. 改写灵感来自何处？"
+
+#: task_manager/templates/query_annotation.html:76
+msgid "This is the initial query."
+msgstr "这是首次查询。"
+
+#: task_manager/templates/query_annotation.html:78
+msgid "From the search snippet (including snippet and title)."
+msgstr "来自搜索片段（包括片段和标题）。"
+
+#: task_manager/templates/query_annotation.html:80
+msgid ""
+"From other components in SERP, such as related search, ads, hot queries."
+msgstr "来自搜索引擎结果页面的其他组件，如相关搜索、广告、热门查询。"
+
+#: task_manager/templates/query_annotation.html:82
+msgid "From one or several landing pages."
+msgstr "来自一个或多个着陆页面。"
+
+#: task_manager/templates/query_annotation.html:84
+msgid ""
+"Others (Not from the search process, e.g., a cognitive snap or having "
+"thought about it before the search process)."
+msgstr "其他（不是来自搜索过程，例如认知快照或在搜索过程之前考虑过）。"
+
+#: task_manager/templates/query_annotation.html:91
+msgid ""
+"3. Were you satisfied with the search results in this query？(0) unsatisfied "
+"- (4) very satisfied"
+msgstr "3. 你对该查询的搜索结果满意吗？（0）不满意-（4）非常满意"
+
+#: task_manager/templates/query_annotation.html:103
+msgid "4. Why did you reformulate this query or end your search?"
+msgstr "4. 为什么你修改了这个查询或结束了你的搜索？"
+
+#: task_manager/templates/query_annotation.html:106
+msgid "I have found enough information."
+msgstr "我已经找到了足够的信息。"
+
+#: task_manager/templates/query_annotation.html:109
+msgid ""
+"I found no useful information with great effort and were forced to "
+"reformulate the query."
+msgstr "我花费了很大的努力，但没有找到有用的信息，只能重新制定查询。"
+
+#: task_manager/templates/query_annotation.html:112
+msgid ""
+"I come up with a better query for current information need without intent "
+"shift."
+msgstr "我针对当前的信息需求想出了一个更好的查询，而没有意图转移。"
+
+#: task_manager/templates/query_annotation.html:115
+msgid "I come up with a more interesting query with intent shift;"
+msgstr "我想出了一个更有趣的查询，有意图的转移；"
+
+#: task_manager/templates/query_annotation.html:125
+msgid ""
+"5. Please click on the links below to annotate the usefulness of each result "
+"page you browse under this query."
+msgstr "5. 请点击下面的链接，标注您在此查询下浏览的每个结果页面的有用性。"
+
+#: task_manager/templates/query_annotation.html:126
+msgid ""
+"(Tip: After clicking the link, search results are shown in the left side of "
+"the page. Please drag the results you think are helpful in the search "
+"process to the corresponding position on the right side according to their "
+"usefulness; For results that you haven't seen or that you don't think will "
+"help you at all, you don't need to drag. To help you recall your search, "
+"we've highlighted the results you clicked on below the results, but that "
+"doesn't mean you have to drag them)"
+msgstr ""
+"(提示：单击链接后，搜索结果会显示在页面的左侧。请根据它们在搜索过程中的实用性"
+"将您认为有帮助的结果拖到右侧相应的位置；对于您没有看到或者认为对您没有帮助的"
+"结果，您无需拖动。为了帮助您回忆搜索内容，我们会在结果下方突出显示您单击的结"
+"果，但这并不意味着您必须将它们拖动。)"
+
+#: task_manager/templates/query_annotation.html:128
+msgid "Query:"
+msgstr "查询："
+
+#: task_manager/templates/query_annotation.html:132
+msgid "(Click here to annotate)"
+msgstr "（点击此处进行标注）"
+
+#: task_manager/templates/query_annotation.html:157
+msgid ""
+"6. Please confirm the expectation for the current query after the search "
+"process."
+msgstr "6. 请确认搜索过程后对当前查询的期望。"
+
+#: task_manager/templates/query_annotation.html:159
+msgid "6.1"
+msgstr "6.1"
+
+#: task_manager/templates/query_annotation.html:159
+msgid "Diveristy"
+msgstr "多样性"
+
+#: task_manager/templates/query_annotation.html:160
+msgid "How many topics do you expect the results of this query to include?"
+msgstr "您期望此查询的结果包含多少个主题？"
+
+#: task_manager/templates/query_annotation.html:160
+msgid "Tip: Pre-search expectation is"
+msgstr "提示：预期搜索结果为"
+
+#: task_manager/templates/query_annotation.html:164
+msgid "Five or more"
+msgstr "五个或以上"
+
+#: task_manager/templates/query_annotation.html:164
+msgid "Current choice"
+msgstr "当前选择"
+
+#: task_manager/templates/query_annotation.html:177
+msgid "6.2"
+msgstr "6.2"
+
+#: task_manager/templates/query_annotation.html:178
+msgid ""
+"Which of the following result types do you expect to be returned by this "
+"query? (Multiple options，Tip: Pre-search expectation is"
+msgstr "您期望此查询返回以下哪些类型的结果？（多选，提示：预期搜索结果为"
+
+#: task_manager/templates/query_annotation.html:197
+msgid "Redundancy"
+msgstr "冗余性"
+
+#: task_manager/templates/query_annotation.html:199
+msgid "0: All similar"
+msgstr "0：全部相似"
+
+#: task_manager/templates/query_annotation.html:201
+msgid "1: Minority of the results are different"
+msgstr "1: 少数结果不同"
+
+#: task_manager/templates/query_annotation.html:202
+msgid "2: Half of the results is different"
+msgstr "2: 一半结果不同"
+
+#: task_manager/templates/query_annotation.html:203
+msgid "3: Majority of the results are different"
+msgstr "3: 大多数结果不同"
+
+#: task_manager/templates/query_annotation.html:204
+msgid "4: All results are different"
+msgstr "4: 全部结果不同"
+
+#: task_manager/templates/query_annotation.html:209
+msgid "Difficulty"
+msgstr "难度"
+
+#: task_manager/templates/query_annotation.html:210
+msgid ""
+"How do you expect the difficulty of the search process? (Tip: Pre-search "
+"expectation is"
+msgstr "您期望搜索过程的难度如何？（提示：预期难度是"
+
+#: task_manager/templates/query_annotation.html:210
+msgid "）"
+msgstr "）"
+
+#: task_manager/templates/query_annotation.html:211
+msgid "0: Very easy"
+msgstr "0：非常容易"
+
+#: task_manager/templates/query_annotation.html:213
+msgid "1: Easy"
+msgstr "1：容易"
+
+#: task_manager/templates/query_annotation.html:215
+msgid "2: A little bit difficult"
+msgstr "2：有点困难"
+
+#: task_manager/templates/query_annotation.html:216
+msgid "3: Difficult"
+msgstr "3：困难"
+
+#: task_manager/templates/query_annotation.html:218
+msgid "4: Very difficult"
+msgstr "4：非常困难"
+
+#: task_manager/templates/query_annotation.html:224
+msgid "Number of relevant results"
+msgstr "相关结果的数量"
+
+#: task_manager/templates/query_annotation.html:225
+msgid ""
+"How many relevant results do you expect to find in this query? (Tip: Pre-"
+"search expectation is"
+msgstr "您期望在此查询中找到多少个相关的结果？（提示：预期搜索结果为"
+
+#: task_manager/templates/query_annotation.html:246
+msgid "Effort"
+msgstr "工作量"
+
+#: task_manager/templates/query_annotation.html:247
+msgid ""
+": How much time do you expect to spend searching for relevant information in "
+"this query? (Tip: Pre-search expectation is"
+msgstr "您期望在此查询中花费多少时间搜索相关信息？（提示：预期搜索结果为"
+
+#: task_manager/templates/query_annotation.html:250
+msgid "Ten minute or longer (Current choice"
+msgstr "十分钟或更长时间（当前选择"
+
+#: task_manager/templates/task_annotation1.html:7
+msgid "Task Description"
+msgstr "任务描述"
+
+#: task_manager/templates/task_annotation1.html:13
+#: task_manager/templates/task_annotation2.html:19
+msgid "Queries within the task"
+msgstr "任务内的查询"
+
+#: task_manager/templates/task_annotation1.html:20
+msgid "click here to view"
+msgstr "点击此处查看"
+
+#: task_manager/templates/task_annotation1.html:27
+msgid "Annotation Guidelines"
+msgstr "标注指南"
+
+#: task_manager/templates/task_annotation1.html:30
+msgid ""
+"Some information need to be recorded, including the <b>search background</b> "
+"and your <b>search intent</b>. Make sure that you are familiar with the "
+"following standards and rules before annotating."
+msgstr ""
+"需要记录一些信息，包括<b>搜索背景</b>和您的<b>搜索意图</b>。确保在注释之前熟"
+"悉以下标准和规则。"
+
+#: task_manager/templates/task_annotation1.html:32
+msgid "Search background"
+msgstr "搜索背景"
+
+#: task_manager/templates/task_annotation1.html:34
+msgid "Did you have enough time"
+msgstr "您是否有足够的时间"
+
+#: task_manager/templates/task_annotation1.html:35
+msgid "Were you in a quiet scenario"
+msgstr "您是否处于安静的情境中"
+
+#: task_manager/templates/task_annotation1.html:37
+msgid "Search intent"
+msgstr "搜索意图"
+
+#: task_manager/templates/task_annotation1.html:39
+msgid "How specific was your search intent?"
+msgstr "您的搜索意图有多具体？"
+
+#: task_manager/templates/task_annotation1.html:41
+msgid "You only wanted to search for Christmas posters → very specific (4)；"
+msgstr "您只想搜索圣诞节海报 → 非常具体（4）;"
+
+#: task_manager/templates/task_annotation1.html:43
+msgid ""
+"You wanted to search for various information about Christmas → rather "
+"specific (2-3)；"
+msgstr "您想搜索关于圣诞节的各种信息 → 相当具体（2-3）；"
+
+#: task_manager/templates/task_annotation1.html:44
+msgid "You wanted to search for anything → very broad (0-1);"
+msgstr "您想搜索任何东西 → 非常广泛（0-1）;"
+
+#: task_manager/templates/task_annotation1.html:46
+msgid "How was this search task motivated?"
+msgstr "这个搜索任务的动机是什么？"
+
+#: task_manager/templates/task_annotation1.html:47
+msgid "You are suddenly interested in some celebrity → interest-driven (0-1)；"
+msgstr "你突然对某个名人感兴趣 → 兴趣驱动 (0-1)；"
+
+#: task_manager/templates/task_annotation1.html:49
+msgid ""
+"Summer is coming and you want to buy a new dress → interest- and task-driven "
+"(2)；"
+msgstr "夏天即将到来，您想要买一件新连衣裙 → 兴趣和任务驱动（2）；"
+
+#: task_manager/templates/task_annotation1.html:50
+msgid ""
+"You wanted to search for information to complete your homework → task-driven "
+"(3-4)；"
+msgstr "您想搜索信息来完成家庭作业 → 任务驱动（3-4）；"
+
+#: task_manager/templates/task_annotation1.html:52
+msgid "Were you familiar with the search tasks before searching?"
+msgstr "在搜索之前，您是否熟悉搜索任务？"
+
+#: task_manager/templates/task_annotation1.html:59
+msgid "Please review the search process and select the appropriate options."
+msgstr "请检查搜索过程并选择适当的选项。"
+
+#: task_manager/templates/task_annotation1.html:63
+msgid ""
+"1. You were urgent and needed to complete the search immediately, 0→4: "
+"Completely disagreed → Completely agreed"
+msgstr "1. 您需要立即完成搜索，0→4：完全不同意→完全同意"
+
+#: task_manager/templates/task_annotation1.html:74
+msgid ""
+"2. The surrounding environment was very noisy, which can affect your "
+"concentration on the search, 0→4: Completely disagreed → Completelyagreed"
+msgstr ""
+"2. 周围环境很吵闹，可能会影响您对搜索的集中精力程度，0→4：完全不同意→完全同意"
+
+#: task_manager/templates/task_annotation1.html:85
+msgid "3. Search specificity, 0→4: Very broad → Very clear"
+msgstr "3. 搜索特定性，0→4：非常广泛→非常明确"
+
+#: task_manager/templates/task_annotation1.html:96
+msgid ""
+"4. How was this search task motivated? (0) interest-driven -> (4) task-driven"
+msgstr "4. 此搜索任务的动机是什么？（0）兴趣驱动→（4）任务驱动"
+
+#: task_manager/templates/task_annotation1.html:107
+msgid ""
+"5. Were you familiar with the search tasks before searching? (0) not at all -"
+"> (4) very familiar"
+msgstr "5. 您在搜索之前是否熟悉搜索任务？（0）完全不熟悉→（4）非常熟悉"
+
+#: task_manager/templates/task_annotation2.html:13
+#: task_manager/templates/task_annotation2.html:33 templates/base.html:59
+msgid "Task Annotation"
+msgstr "任务标注"
+
+#: task_manager/templates/task_annotation2.html:26
+msgid "(Click here to view)"
+msgstr "（点击此处查看）"
+
+#: task_manager/templates/task_annotation2.html:37
+msgid ""
+"1. <b>Task Satisfaction</b> Were you satisfied with the search process "
+"during this task? (0) unsatisfied - (4) very satisfied"
+msgstr ""
+"1. <b>任务满意度</b> 您对本次任务的搜索过程是否满意？(0) 不满意 - (4) 非常满"
+"意"
+
+#: task_manager/templates/task_annotation2.html:49
+msgid ""
+"2. <b>Task Difficulty</b> How do you feel about the difficulty of finding "
+"useful information? (0) very easy - (4) very difficult"
+msgstr ""
+"2. <b>任务难度</b> 您对寻找有用信息的难度感觉如何？(0) 很容易 - (4) 非常困难"
+
+#: task_manager/templates/task_annotation2.html:61
+msgid ""
+"3. <b>Task Success</b> Did you find any useful information for this task? "
+"(0) almost no - (4) all you want"
+msgstr ""
+"3. <b>任务成功度</b> 您是否找到了本次任务所需的有用信息？(0) 几乎没有 - (4) "
+"所有你需要的"
+
+#: task_manager/templates/task_home.html:8
+msgid "Task Homepage"
+msgstr "任务主页"
+
+#: task_manager/templates/task_home.html:15
+msgid "Hello,"
+msgstr "你好，"
+
+#: task_manager/templates/task_home.html:15
+msgid ", here is your current annotation:"
+msgstr "，这是您当前的标注："
+
+#: task_manager/templates/task_home.html:20
+msgid "Number of annotated queries:"
+msgstr "已标注查询数量："
+
+#: task_manager/templates/task_home.html:28
+msgid "Number of grouped but unannotated queries:"
+msgstr "分组但未标注的查询数量："
+
+#: task_manager/templates/task_home.html:36
+msgid "Number of ungrouped queries:"
+msgstr "未分组的查询数量："
+
+#: task_manager/templates/task_home.html:47
+msgid "Click here to group queries"
+msgstr "点击此处对查询进行分组"
+
+#: task_manager/templates/task_home.html:50
+msgid "Click here to annotate grouped queries"
+msgstr "点击此处对分组的查询进行标注"
+
+#: task_manager/templates/task_partition.html:7
+#: task_manager/templates/task_partition.html:18
+msgid "Query Partition"
+msgstr "查询分组"
+
+#: task_manager/templates/task_partition.html:13
+msgid "Ungrouped Queries"
+msgstr "未分组查询"
+
+#: task_manager/templates/task_partition.html:15
+msgid ""
+"Ungrouped queries can be grouped or deleted (deleted queries will not be "
+"logged)"
+msgstr "未分组的查询可以分组或删除（删除的查询将不会被记录）"
+
+#: task_manager/templates/task_partition.html:21
+msgid "Query Deletion"
+msgstr "查询删除"
+
+#: task_manager/templates/task_partition.html:32
+msgid "(Click Here to View)"
+msgstr "（点击此处查看）"
+
+#: task_manager/templates/task_partition.html:41
+msgid "Grouped Queries"
+msgstr "分组查询"
+
+#: task_manager/templates/task_partition.html:43
+msgid "Group query can be cancelled"
+msgstr "分组查询可以被取消"
+
+#: task_manager/templates/task_partition.html:46
+msgid "Ungroup"
+msgstr "取消分组"
+
+#: task_manager/templates/task_partition.html:61
+msgid "Click here to annotate."
+msgstr "点击此处进行标注。"
+
+#: templates/base.html:51
+msgid "Homepage"
+msgstr "主页"
+
+#: templates/base.html:55
+msgid "Query Grouping"
+msgstr "查询分组"
+
+#: templates/base.html:63 user_system/templates/info.html:7
+msgid "User Info"
+msgstr "用户信息"
+
+#: templates/base.html:67
+msgid "Logout"
+msgstr "退出"
+
+#: templates/base.html:73 user_system/templates/login.html:35
+msgid "Login"
+msgstr "登录"
+
+#: user_system/templates/auth_failed.html:9
+msgid "Unauthorized"
+msgstr "未授权"
+
+#: user_system/templates/auth_failed.html:16 user_system/templates/info.html:14
+msgid "Username"
+msgstr "用户名"
+
+#: user_system/templates/auth_failed.html:25
+msgid "Need Permission"
+msgstr "需要权限"
+
+#: user_system/templates/auth_failed.html:34
+msgid "Current Permission"
+msgstr "当前权限"
+
+#: user_system/templates/auth_failed.html:42
+msgid "Switch the user"
+msgstr "切换用户"
+
+#: user_system/templates/edit_info.html:8
+msgid "Edit User Info"
+msgstr "编辑用户信息"
+
+#: user_system/templates/edit_info.html:48 user_system/templates/signup.html:62
+msgid "How often do you use search engines?"
+msgstr "您多久使用一次搜索引擎？"
+
+#: user_system/templates/edit_info.html:53 user_system/templates/signup.html:67
+msgid "How long have you been using search engines?"
+msgstr "您使用搜索引擎多长时间了？"
+
+#: user_system/templates/edit_password.html:7
+msgid "Edit password"
+msgstr "编辑密码"
+
+#: user_system/templates/forget_password.html:8
+msgid "Forget Password"
+msgstr "忘记密码"
+
+#: user_system/templates/forget_password.html:28
+msgid "Send Email"
+msgstr "发送邮件"
+
+#: user_system/templates/info.html:22
+msgid "Name"
+msgstr "姓名"
+
+#: user_system/templates/info.html:30
+msgid "Gender"
+msgstr "性别"
+
+#: user_system/templates/info.html:38
+msgid "Age"
+msgstr "年龄"
+
+#: user_system/templates/info.html:46
+msgid "Phone Number"
+msgstr "电话号码"
+
+#: user_system/templates/info.html:54
+msgid "E-mail Address"
+msgstr "电子邮件地址"
+
+#: user_system/templates/info.html:62
+msgid "Occupation"
+msgstr "职业"
+
+#: user_system/templates/info.html:70
+msgid "How often do you use search engines"
+msgstr "您多久使用一次搜索引擎"
+
+#: user_system/templates/info.html:78
+msgid "How long have you been using search engiens"
+msgstr "您使用搜索引擎多长时间了"
+
+#: user_system/templates/info.html:86
+msgid "Edit Personal Info"
+msgstr "编辑用户信息"
+
+#: user_system/templates/info.html:89
+msgid "Edit Password"
+msgstr "编辑密码"
+
+#: user_system/templates/login.html:36
+msgid "Forget password?"
+msgstr "忘记密码？"
+
+#: user_system/templates/login.html:37
+msgid "Create a new account"
+msgstr "创建一个新账号"
+
+#: user_system/templates/reset_password.html:8
+msgid "Reset Password"
+msgstr "重置密码"
+
+#: user_system/templates/signup.html:8 user_system/templates/signup.html:76
+msgid "Signup"
+msgstr "注册"
+
+#, fuzzy
+#~| msgid "How often do you use search engines?"
+#~ msgid "trans How often do you use search engines?"
+#~ msgstr "您多久使用一次搜索引擎？"
+
+#~ msgid "Some information need to be recorded, including the"
+#~ msgstr "需要记录一些信息，包括"
+
+#~ msgid "search background"
+#~ msgstr "搜索背景"
+
+#~ msgid "search intent"
+#~ msgstr "搜索意图"

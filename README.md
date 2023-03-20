@@ -26,25 +26,14 @@ This codebase contains source-code of the field study platform of our WWW 2021 p
 You can add or delete any function on your need. BTW, we are delighted to introduce the dataset we collected via this toolkit: [TianGong-Qref](http://www.thuir.cn/tiangong-qref/). 🤠
 
 ## Environment compatibility  
-* Python>=2.7  
-* Django>=1.8.3
+* Python>=3.7  
+* Django>=3.0.0
 
 ## Support
 Fow now, this toolkit only support the logging on Baidu and Sogou, which are two largest commercial search engines in China. We welcome anyone to implement the support for more search engines such as Google, Bing, Yahoo, and Naver.
 
 ## How to launch
-* As our toolkit use MongoDB to store data, you should first make sure that your django backend has been connected to a running MongoDB engine. Try the following script on Linux OS/MacOS to make sure that you have launched the MongoDB correctly:
-```bash
-cd /usr/local/bin
-sudo ./mongod
-```
-Then open another terminal window and run the following command:
-```bash
-cd /usr/local/bin
-./mongo
-```
-If you have any problems about MongoDB, please refer to this [tutorial](https://www.tutorialspoint.com/mongodb/index.htm).
-* To initialize the MongoDB database:
+* To initialize the database:
 ```bash
 python manage.py makemigrations user_system
 python manage.py makemigrations task_manager

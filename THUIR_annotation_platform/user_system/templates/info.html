@@ -1,17 +1,17 @@
-{% extends "base.html" %} {% load i18n %}
-{% block title %} User Info {% endblock %}
+{% extends "base.html" %}
+{% block title %} 用户信息  {% endblock %}
 
 {% block content %}
-<div class="row text-center">
-    <h3>
-        {% trans "User Info" %}
-    </h3>
-</div>
-<div class="row">
+    <div class="row text-center">
+        <h3>
+            用户信息
+        </h3>
+    </div>
+    <div class="row">
     <div class="col-xs-offset-3 col-xs-6 user_info">
         <div class="user_info_row row">
             <div class="info_label col-xs-offset-0 col-xs-6">
-                {% trans "Username" %}:
+                用户名:
             </div>
             <div class="info_value col-xs-offest-6 col-xs-6">
                 {{ cur_user.username }}
@@ -19,7 +19,7 @@
         </div>
         <div class="user_info_row row">
             <div class="info_label col-xs-offset-0 col-xs-6">
-                {% trans "Name" %}:
+                姓名:
             </div>
             <div class="info_value col-xs-offest-6 col-xs-6">
                 {{ cur_user.name }}
@@ -27,7 +27,7 @@
         </div>
         <div class="user_info_row row">
             <div class="info_label col-xs-offset-0 col-xs-6">
-                {% trans "Gender" %}:
+                性别:
             </div>
             <div class="info_value col-xs-offest-6 col-xs-6">
                 {{ cur_user.sex }}
@@ -35,7 +35,7 @@
         </div>
         <div class="user_info_row row">
             <div class="info_label col-xs-offset-0 col-xs-6">
-                {% trans "Age" %}:
+                年龄:
             </div>
             <div class="info_value col-xs-offest-6 col-xs-6">
                 {{ cur_user.age }}
@@ -43,7 +43,7 @@
         </div>
         <div class="user_info_row row">
             <div class="info_label col-xs-offset-0 col-xs-6">
-                {% trans "Phone Number" %}:
+                手机:
             </div>
             <div class="info_value col-xs-offest-6 col-xs-6">
                 {{ cur_user.phone }}
@@ -51,7 +51,7 @@
         </div>
         <div class="user_info_row row">
             <div class="info_label col-xs-offset-0 col-xs-6">
-                {% trans "E-mail Address" %}:
+                邮箱:
             </div>
             <div class="info_value col-xs-offest-6 col-xs-6">
                 {{ cur_user.email }}
@@ -59,7 +59,7 @@
         </div>
         <div class="user_info_row row">
             <div class="info_label col-xs-offset-0 col-xs-6">
-                {% trans "Occupation" %}:
+                职业+学习/工作领域:
             </div>
             <div class="info_value col-xs-offest-6 col-xs-6">
                 {{ cur_user.field }}
@@ -67,7 +67,7 @@
         </div>
         <div class="user_info_row row">
             <div class="info_label col-xs-offset-0 col-xs-6">
-                {% trans "How often do you use search engines" %}:
+                搜索引擎使用频率:
             </div>
             <div class="info_value col-xs-offest-6 col-xs-6">
                 {{ search_frequency }}
@@ -75,20 +75,54 @@
         </div>
         <div class="user_info_row row">
             <div class="info_label col-xs-offset-0 col-xs-6">
-                {% trans "How long have you been using search engiens" %}:
+                搜索引擎使用历史:
             </div>
             <div class="info_value col-xs-offest-6 col-xs-6">
                 {{ search_history }}
             </div>
         </div>
+{#        <div class="user_info_row row">#}
+{#            <div class="info_label col-xs-offset-0 col-xs-6">#}
+{#                注册时间:#}
+{#            </div>#}
+{#            <div class="info_value col-xs-offest-6 col-xs-6">#}
+{#                {{ cur_user.signup_time }}#}
+{#            </div>#}
+{#        </div>#}
+{#        <div class="user_info_row row">#}
+{#            <div class="info_label col-xs-offset-0 col-xs-6">#}
+{#                上次登录时间:#}
+{#            </div>#}
+{#            <div class="info_value col-xs-offest-6 col-xs-6">#}
+{#                {{ cur_user.last_login }}#}
+{#            </div>#}
+{#        </div>#}
+{#        <div class="user_info_row row">#}
+{#            <div class="info_label col-xs-offset-0 col-xs-6">#}
+{#                登录次数:#}
+{#            </div>#}
+{#            <div class="info_value col-xs-offest-6 col-xs-6">#}
+{#                {{ cur_user.login_num }}#}
+{#            </div>#}
+{#        </div>#}
+{#        <div class="user_info_row row">#}
+{#            <div class="info_label col-xs-offset-0 col-xs-6">#}
+{#                用户权限:#}
+{#            </div>#}
+{#            <div class="info_value col-xs-offest-6 col-xs-6">#}
+{#                {{ user_group_string }}#}
+{#            </div>#}
+{#        </div>#}
         <div class="row">
             <div class="col-xs-6">
-                <a href="/user/edit_info/" class="btn btn-block btn-lg btn-primary">{% trans "Edit Personal Info" %}</a>
+                <a href="/user/edit_info/" class="btn btn-block btn-lg btn-primary">编辑个人信息</a>
             </div>
             <div class="col-xs-6">
-                <a href="/user/edit_password/" class="btn btn-block btn-lg btn-primary">{% trans "Edit Password" %}</a>
+                <a href="/user/edit_password/" class="btn btn-block btn-lg btn-primary">修改密码</a>
             </div>
         </div>
     </div>
-</div>
+    </div>
 {% endblock %}
+
+

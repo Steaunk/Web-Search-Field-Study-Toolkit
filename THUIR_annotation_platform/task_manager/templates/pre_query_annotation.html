@@ -1,134 +1,125 @@
 {% extends "base.html" %}
-{% load i18n %}
-{% block title %} Query Expectation Annotation {% endblock %}
-{% block content_title %} Query Expectation Annotation {% endblock %}
+{% block title %} 查询预期标注 {% endblock %}
+{% block content_title %} 查询预期标注 {% endblock %}
 {% block content %}
-<div class="row text-center">
-    <h3>
-        {% trans "Please annotation the expectations for this query as follows" %}
-    </h3>
-</div>
-<div class="row">
-    <div class="col-xs-offset-1 col-xs-10">
-        <form class="col-xs-12" id="query-form" action="" method="post" onsubmit="validateForm()"
-            enctype='multipart/form-data'>
-            {% csrf_token %}
-            <div class="col-xs-12" style="border:1px dashed #000; border-radius:10px">
-                <label for="diversity_ratio" class="ratio col-xs-12 list_row">1. <b>{% trans "Diversity" %}</b>: {% trans "How many topics do you expect the results of this query to include? (For example, if you search for 'COVID-19', you want to know the latest data on COVID-19 and the latest policies on COVID-19, and you expect the search engine to return results related to both topics.)" %}</label>
-                <div class="ratio col-xs-12 list_row">
-                    <span style="display:flex;">{% trans "One topic" %} <input type="range" style="width: 20%"
-                            name="diversity" min="1" max="5" value="1" step="1" list="diversity_marks"
-                            oninput="setDiversity()" onchange="setDiversity()" /> 
-                            {% trans "Five or more (Current choice" %}<b><span id="diversity_value">1</span></b>{% trans ")" %}</span><br>
-                    <datalist id="diversity_marks">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </datalist>
+    <div class="row text-center">
+        <h3>
+            请对本查询的预期进行以下标注
+        </h3>
+    </div>
+    <div class="row">
+        <div class="col-xs-offset-1 col-xs-10">
+            <form class="col-xs-12" id="query-form" action="" method="post" onsubmit="validateForm()" enctype='multipart/form-data'>
+                {% csrf_token %}
+                <div class="col-xs-12" style="border:1px dashed #000; border-radius:10px">
+                    <label for="diversity_ratio" class="ratio col-xs-12 list_row">1. <b>多样性</b>：你预期本次查询返回的结果能够包括几个方面的主题？（例如你搜索“新冠疫情”，一方面想了解疫情的最新数据，另一方面也想了解最新的疫情政策，而且你预期搜索引擎能够返回这两方面的主题相关的结果）</label>
+                        <div class="ratio col-xs-12 list_row">
+                            <span style="display:flex;">1个主题 <input type="range" style="width: 20%" name="diversity" min="1" max="5" value="1" step="1" list="diversity_marks" oninput="setDiversity()" onchange="setDiversity()"/> 5个及以上（您当前选择的数值是<b><span id="diversity_value" >1</span></b>）</span><br>
+                            <datalist id="diversity_marks">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </datalist>
+                        </div>
+                    <label for="habit_ratio" class="ratio col-xs-12 list_row">2. <b>结果类型</b>：你预期本次查询返回的结果能够包含下面哪些特定的结果类型？（可多选）</label>
+                        <div class="ratio col-xs-12 list_row">
+                            <label><input type="checkbox" name="habit" value="1"/> 1. 百科类 </label>
+                            <label><input type="checkbox" name="habit" value="2"/> 2. 图片类 </label>
+                            <label><input type="checkbox" name="habit" value="3"/> 3. 视频类 </label>
+                            <label><input type="checkbox" name="habit" value="4"/> 4. 经验类 </label><br>
+                            <label><input type="checkbox" name="habit" value="5"/> 5. 地图类 </label>
+                            <label><input type="checkbox" name="habit" value="6"/> 6. 聚合类 </label>
+                            <label><input type="checkbox" name="habit" value="7"/> 7. 卡片类 </label>
+                            <label><input type="checkbox" name="habit" value="0"/> 0. 其他类 </label><br>
+                        </div>
+                    <input id="habit_str" type="hidden" name="habit_str">
+                    <label for="redundancy_ratio" class="ratio col-xs-12 list_row">3. <b>重复度</b>：你预期本次查询返回结果的重复度如何？</label>
+                        <div class="ratio col-xs-12 list_row">
+                            <label><input type="radio" name="redundancy" value="0"/> 0：你已经做好了全都是相似结果的准备</label><br>
+                            <label><input type="radio" name="redundancy" value="1"/> 1：你希望至少有少数结果和其他结果不一样</label><br>
+                            <label><input type="radio" name="redundancy" value="2"/> 2：你希望至少有一半结果和其他结果不一样</label><br>
+                            <label><input type="radio" name="redundancy" value="3"/> 3：你希望至少有大部分结果都和其他结果不一样</label><br>
+                            <label><input type="radio" name="redundancy" value="4"/> 4：你希望所有结果都不是重复的</label><br>
+                        </div>
+                    <label for="difficulty_ratio" class="ratio col-xs-12 list_row">4. <b>困难度</b>：你预期本次查询找到你需要的信息将会有多困难？</label>
+                        <div class="ratio col-xs-12 list_row">
+                            <label><input type="radio" name="difficulty" value="0"/> 0：你认为找到你需要的信息应该非常容易，甚至可能直接就展示给你了</label><br>
+                            <label><input type="radio" name="difficulty" value="1"/> 1：你认为找到你需要的信息相对比较简单，在某些结果稍微找一下就能够发现</label><br>
+                            <label><input type="radio" name="difficulty" value="2"/> 2：你认为找到你需要的信息有一点点困难，可能需要多看一些结果，搜寻一下</label><br>
+                            <label><input type="radio" name="difficulty" value="3"/> 3：你认为找到你需要的信息可能比较困难，可能大部分结果都找不到，需要你比较仔细地进行查看</label><br>
+                            <label><input type="radio" name="difficulty" value="4"/> 4：你认为找到你需要的信息会非常困难，甚至可能完全找不到</label><br>
+                        </div>
+                    <label for="gain_ratio" class="ratio col-xs-12 list_row">5. <b>相关结果数量</b>：你预期本次查询你需要找到多少个相关的结果？（例如你想搜索北京今天的天气，那么你可能预期只需要找到一个相关的结果就够了；而如果你想搜索北京秋游可以去哪里玩，你可能会预期需要找到四五个相关的结果）</label>
+                        <div class="ratio col-xs-12 list_row">
+                            <span style="display:flex;">1个相关结果 <input type="range" style="width: 40%" name="gain" min="1" max="10" value="1" step="1" list="gain_marks" oninput="setGain()" onchange="setGain()"/> 10个及以上（您当前选择的数值是<b><span id="gain_value" >1</span></b>）</span><br>
+                            <datalist id="gain_marks">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                            </datalist>
+                        </div>
+                    <label for="effort_ratio" class="ratio col-xs-12 list_row">6. <b>投入精力</b>：你预期本次查询你会投入多少时间精力在寻找相关的信息上？（注意，你找到相关信息后利用找到的信息去完成你的任务的时间不包括在内，例如你想看电影，找到电影之后看电影的时间是不包括的）</label>
+                        <div class="ratio col-xs-12 list_row">
+                            <span style="display:flex;">1分钟左右 <input type="range" style="width: 40%" name="effort" min="1" max="10" value="1" step="1" list="effort_marks" oninput="setEffort()" onchange="setEffort()"/> 10分钟及更长时间（您当前选择的数值是<b><span id="effort_value" >1</span></b>）</span><br>
+                            <datalist id="effort_marks">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                            </datalist>
+                        </div>
                 </div>
-                <label for="habit_ratio" class="ratio col-xs-12 list_row">2. <b>{% trans "Result Type" %}</b>: 
-                    {% trans "Which of the following result types do you expect to be returned by this query? (Multiple options)" %}</label>
-                <div class="ratio col-xs-12 list_row">
-                    <label><input type="checkbox" name="habit" value="1" /> 1. {% trans "Wikipedia type" %} </label>
-                    <label><input type="checkbox" name="habit" value="2" /> 2. {% trans "Image type" %} </label>
-                    <label><input type="checkbox" name="habit" value="3" /> 3. {% trans "Video type" %} </label>
-                    <label><input type="checkbox" name="habit" value="4" /> 4. {% trans "Experience type" %}
-                    </label><br>
-                    <label><input type="checkbox" name="habit" value="5" /> 5. {% trans "Map type" %} </label>
-                    <label><input type="checkbox" name="habit" value="6" /> 6. {% trans "Aggregated type" %} </label>
-                    <label><input type="checkbox" name="habit" value="7" /> 7. {% trans "Card type" %} </label>
-                    <label><input type="checkbox" name="habit" value="0" /> 0. {% trans "Others" %}</label><br>
-                </div>
-                <input id="habit_str" type="hidden" name="habit_str">
-                <label for="redundancy_ratio" class="ratio col-xs-12 list_row">{% trans "3. <b>Redundancy</b>: How do you expect the redundancy of the results？" %}</label>
-                <div class="ratio col-xs-12 list_row">
-                    <label><input type="radio" name="redundancy" value="0" /> {% trans "0：All similar" %}</label><br>
-                    <label><input type="radio" name="redundancy" value="1" /> {% trans "1：Minority of the results are different" %}</label><br>
-                    <label><input type="radio" name="redundancy" value="2" /> {% trans "2：Half of the results is different" %}</label><br>
-                    <label><input type="radio" name="redundancy" value="3" /> {% trans "3：Majority of the results are different" %}</label><br>
-                    <label><input type="radio" name="redundancy" value="4" /> {% trans "4：All results are different" %}</label><br>
-                </div>
-                <label for="difficulty_ratio" class="ratio col-xs-12 list_row">{% trans "4. <b>Difficulty</b>: How do you expect the difficulty of the search process？" %}</label>
-                <div class="ratio col-xs-12 list_row">
-                    <label><input type="radio" name="difficulty" value="0" /> {% trans "0：Very easy" %}</label><br>
-                    <label><input type="radio" name="difficulty" value="1" /> {% trans "1：Easy" %}</label><br>
-                    <label><input type="radio" name="difficulty" value="2" /> {% trans "2：A little bit difficult" %}</label><br>
-                    <label><input type="radio" name="difficulty" value="3" /> {% trans "3：Difficult" %}</label><br>
-                    <label><input type="radio" name="difficulty" value="4" /> {% trans "4：Very difficult" %}</label><br>
-                </div>
-                <label for="gain_ratio" class="ratio col-xs-12 list_row">{% trans "5. <b>Number of relevant results</b>: How many relevant results do you expect to find in this query? (If you want to search for weather in Beijing today, for example, you might expect to find only one relevant result; And if you want to search for places for an autumn trip in Beijing, you might expect to find four or five relevant results.)" %}</label>
-                <div class="ratio col-xs-12 list_row">
-                    <span style="display:flex;">{% trans "One relevant result" %} <input type="range" style="width: 40%"
-                            name="gain" min="1" max="10" value="1" step="1" list="gain_marks" oninput="setGain()"
-                            onchange="setGain()" /> {% trans "Ten or more (Current choice" %}<b><span
-                                id="gain_value">1</span></b>){% trans "}" %}</span><br>
-                    <datalist id="gain_marks">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>8</option>
-                        <option>9</option>
-                        <option>10</option>
-                    </datalist>
-                </div>
+                <div class="col-xs-12"><br/></div>
 
-                <label for="effort_ratio" class="ratio col-xs-12 list_row">{% trans "6. <b>Effort</b>: How much time do you expect to spend searching for relevant information in this query? (Note that the time you spend finding the relevant information and using it to complete your task is not included. For example, if you want to watch a movie, the time you spend watching a movie after finding the movie is not included.)" %}</label>
-                <div class="ratio col-xs-12 list_row">
-                    <span style="display:flex;">{% trans "One minute" %} <input type="range" style="width: 40%"
-                            name="effort" min="1" max="10" value="1" step="1" list="effort_marks" oninput="setEffort()"
-                            onchange="setEffort()" /> {% trans "Ten minutes or longer (Current choice" %}<b><span
-                                id="effort_value">1</span></b>{% trans ")" %}</span><br>
-                    <datalist id="effort_marks">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>8</option>
-                        <option>9</option>
-                        <option>10</option>
-                    </datalist>
+            </form>
+            <div class="col-xs-12">
+                <div id="query-btn" class="col-xs-6 submit-btn btn btn-block btn-lg btn-primary">
+                    提交标注
                 </div>
-            </div>
-            <div class="col-xs-12"><br /></div>
-
-        </form>
-        <div class="col-xs-12">
-            <div id="query-btn" class="col-xs-6 submit-btn btn btn-block btn-lg btn-primary">
-                {% trans "Submit" %}
             </div>
         </div>
-    </div>
-    <script>
-        function setDiversity() {
-            var diversity_val = document.getElementById("diversity_value");
-            diversity_val.innerText = document.getElementsByName("diversity")[0].value;
-        }
-        function setEffort() {
-            var effort_val = document.getElementById("effort_value");
-            effort_val.innerText = document.getElementsByName("effort")[0].value;
-        }
-        function setGain() {
-            var gain_val = document.getElementById("gain_value");
-            gain_val.innerText = document.getElementsByName("gain")[0].value;
-        }
-        function validateForm() {
-            var checks = $('input[type="checkbox"]:checked').map(function () {
-                return $(this).val();
-            }).get();
-            $("#habit_str").val(checks);
-        }
+        <script>
+        </script>
+        <script>
+		    function setDiversity(){
+		        var diversity_val = document.getElementById("diversity_value");
+		        diversity_val.innerText = document.getElementsByName("diversity")[0].value;
+            }
+            function setEffort(){
+		        var effort_val = document.getElementById("effort_value");
+		        effort_val.innerText = document.getElementsByName("effort")[0].value;
+            }
+            function setGain(){
+                var gain_val = document.getElementById("gain_value");
+		        gain_val.innerText = document.getElementsByName("gain")[0].value;
+            }
+            function validateForm() {
+                var checks = $('input[type="checkbox"]:checked').map(function() {
+                    return $(this).val();
+                }).get();
+                //alert(checks);
+                $("#habit_str").val(checks);
+{#                var this_url = window.location.href;#}
+{#                $('form[id="query-form"]').attr('action', this_url);#}
+            }
 
-    </script>
-    <script type="application/x-javascript">
+	    </script>
+        <script type="application/x-javascript">
             $(function () {
                 $('#query-btn').click(
                         function () {
@@ -136,29 +127,30 @@
                             var redundancy = $("[name='redundancy']:checked");
                             var difficulty = $("[name='difficulty']:checked");
                             if (habit.val() == null) {
-                                alert('Please choose a result type!');
+                                alert('请选择一个结果类型预期!');
                                 $("[name='habit]").focus();
                                 return
                             }
                             if (redundancy.val() == null) {
-                                alert('Please check a redundancy button!');
+                                alert('请选择一个重复度预期!');
                                 $("[name='redundancy']").focus();
                                 return
                             }
                             if (difficulty.val() == null) {
-                                alert('Please check a difficulty button!');
+                                alert('请选择一个困难度预期!');
                                 $("[name='difficulty']").focus();
                                 return
                             }
 
-                            if (confirm("Are you sure to submit all annotations?")) {
+                            if (confirm("确认提交所有预标注结果?")) {
                                 $('#query-form').submit();
+{#                                window.close();#}
                             }
 
                         }
                 );
             });
         </script>
-</div>
+    </div>
 
 {% endblock %}

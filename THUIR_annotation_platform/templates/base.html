@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-{% load i18n %}
-
-{% get_current_language as LANGUAGE_CODE %}
-
 <head>
     <meta charset="UTF-8">
     <title>{% block title %} base {% endblock %}</title>
-    <link rel="icon" href="/static/img/IR4.png" type="image/png" />
+    <link rel="icon" href="/static/img/IR4.png" type="image/png"/>
 
     <!-- Loading Bootstrap -->
     <link href="/static/flat-ui/css/vendor/bootstrap.min.css" rel="stylesheet">
@@ -18,122 +14,82 @@
     <!-- Loading Jquery -->
     <script src="/static/flat-ui/js/vendor/jquery.min.js"></script>
     <style>
-        {% block css %}
-
-            {% endblock %}
+    {% block css %}
+    {% endblock %}
     </style>
-    <style>
-        html {
-            overflow-x: hidden;
-        }
-    </style>
+    <style>html { overflow-x:hidden; }</style>
 </head>
-
 <body>
-
     <header>
-        
-        <div class="container-fluid">
-            <div class="col-xs-12">
-                <nav class="navbar navbar-inverse navbar-embossed" role="navigation">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse"
-                            data-target="#navbar-collapse-01">
-                            <span class="sr-only">Toggle navigation</span>
-                        </button>
-                        <span class="navbar-brand" href="#">THUIR Annotation Platform</span>
-                    </div>
-                    <div class="collapse navbar-collapse" id="navbar-collapse-01">
-                        <ul class="nav navbar-nav navbar-right">
-                            {% if cur_user %}
-                            <li><a href="/task/home/">
-                                    <span class="fui-home"></span>
-                                    {% trans "Homepage" %}
-                                </a></li>
-                            <li><a href="/task/partition/">
-                                    <span class="fui-folder"></span>
-                                    {% trans "Query Grouping" %}
-                                </a></li>
-                            <li><a href="/task/annotation/">
-                                    <span class="fui-star-2"></span>
-                                    {% trans "Task Annotation" %}
-                                </a></li>
-                            <li><a href="/user/info/">
-                                    <span class="fui-info-circle"></span>
-                                    {% trans "User Info" %}
-                                </a></li>
-                            <li><a href="/user/logout/">
-                                    <span class="fui-cross-circle"></span>
-                                    {% trans "Logout" %}
-                                </a></li>
-                            {% else %}
-                            <li><a href="/user/login/">
-                                    <span class="fui-user">
-                                    </span>
-                                    {% trans "Login" %}
-                                </a></li>
-                            {% endif %}
-                            <li class="dropdown">
-                                {% get_current_language as LANGUAGE_CODE %}
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ LANGUAGE_CODE | language_name_local }}</a>
-                                <ul class="dropdown-menu">
-                                    {% get_available_languages as LANGUAGES %}
-                                    {% get_language_info_list for LANGUAGES as languages %}
-                                    {% for language in languages %}
-                                        {% if language.code != LANGUAGE_CODE %}
-                                        <li>
-                                            <a href="javascript:lang_{{ forloop.counter }}.submit()" >{{ language.name_local }}</a>
-                                            
-                                        </li>
-                                        <div style="display: none">
-                                            <form name="lang_{{ forloop.counter }}" action="{% url 'set_language' %}" method="post">{% csrf_token %}
-                                                <input name="next" type="hidden" value="/">
-                                                <input name="language" type="hidden" value="{{ language.code }}">
-                                            </form>
-                                            </div>
-                                        {% endif %}
-                                    {% endfor %} 
-                                </ul>
-                              </li>
-                            <li>
-                                <!--<form action="{% url 'set_language' %}" method="post">{% csrf_token %}
-                                    <input name="next" type="hidden" value="{{ redirect_to }}">
-                                    <select name="language">
-                                        {% get_current_language as LANGUAGE_CODE %}
-                                        {% get_available_languages as LANGUAGES %}
-                                        {% get_language_info_list for LANGUAGES as languages %}
-                                        {% for language in languages %}
-                                            <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
-                                                {{ language.name_local }} ({{ language.code }})
-                                            </option>
-                                        {% endfor %}
-                                    </select>
-                                    <input type="submit" value="Go">
-                                </form>-->
-                            </li>
-                        </ul>
-                    </div><!-- /.navbar-collapse -->
-                </nav><!-- /navbar -->
+    <div class="container-fluid">
+        <div class="col-xs-12">
+          <nav class="navbar navbar-inverse navbar-embossed" role="navigation">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+                <span class="sr-only">Toggle navigation</span>
+              </button>
+              <span class="navbar-brand" href="#">THUIR标注平台</span>
             </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse-01">
+              <ul class="nav navbar-nav navbar-right">
+                  {% if cur_user %}
+                      <li><a href="/task/home/">
+                          <span class="fui-home"></span>
+                          标注主页
+                      </a></li>
+                      <li><a href="/task/partition/">
+                          <span class="fui-folder"></span>
+                          查询分组
+                      </a></li>
+                      <li><a href="/task/annotation/">
+                          <span class="fui-star-2"></span>
+                          任务标注
+                      </a></li>
+                      <li><a href="/user/info/">
+                          <span class="fui-info-circle"></span>
+                          个人信息
+                      </a></li>
+                      <li><a href="/user/logout/">
+                          <span class="fui-cross-circle"></span>
+                          登出
+                      </a></li>
+                  {% else %}
+                      <li><a href="/user/login/">
+                          <span class="fui-user">
+                          </span>
+                          登录
+                      </a></li>
+                  {% endif %}
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </nav><!-- /navbar -->
         </div>
-        
+    </div>
     </header>
 
     <section>
-        <div class="container" style="width: 100%">
+    <div class="container" style="width: 100%">
             {% block content %}
-            This is content!
+                This is content!
             {% endblock %}
-        </div>
-        <br />
-        <br />
+    </div>
+    <br />
+    <br />
     </section>
 
 
+    <!--<footer>
+        <div class="container">
+            <div class="row">
+                <p class="text-center">
+                   THUIR 标注平台
+                </p>
+            </div>
+        </div>
+    </footer>-->
     <script src="/static/flat-ui/js/vendor/jquery.min.js"></script>
     <script src="/static/flat-ui/js/flat-ui.min.js"></script>
     {% block scripts %}
     {% endblock %}
 </body>
-
 </html>

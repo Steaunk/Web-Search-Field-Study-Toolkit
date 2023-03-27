@@ -1,19 +1,17 @@
 {% extends "base.html" %}
-{% load i18n %}
-{% block title %} User Info {% endblock %}
+{% block title %} 用户信息  {% endblock %}
 
 {% block content %}
-<div class="row text-center">
-    <h3>
-        Unauthorized
-        {% trans "Unauthorized" %}
-    </h3>
-</div>
-<div class="row">
+    <div class="row text-center">
+        <h3>
+           权限不足
+        </h3>
+    </div>
+    <div class="row">
     <div class="col-xs-offset-3 col-xs-6 user_info">
         <div class="user_info_row row">
             <div class="info_label col-xs-offset-0 col-xs-6">
-                {% trans "Username" %}:
+                用户名:
             </div>
             <div class="info_value col-xs-offest-6 col-xs-6">
                 {{ cur_user.username }}
@@ -22,7 +20,7 @@
 
         <div class="user_info_row row">
             <div class="info_label col-xs-offset-0 col-xs-6">
-                {% trans "Need Permission" %}:
+                需要权限:
             </div>
             <div class="info_value col-xs-offest-6 col-xs-6">
                 {{ missing_group_string }}
@@ -31,7 +29,7 @@
 
         <div class="user_info_row row">
             <div class="info_label col-xs-offset-0 col-xs-6">
-                {% trans "Current Permission" %}:
+                用户当前权限:
             </div>
             <div class="info_value col-xs-offest-6 col-xs-6">
                 {{ user_group_string }}
@@ -39,10 +37,12 @@
         </div>
         <div class="row">
             <div class="col-xs-offset-3 col-xs-6">
-                <a href="/user/login/" class="btn btn-block btn-lg btn-primary">{% trans "Switch the user" %}</a>
+                <a href="/user/login/" class="btn btn-block btn-lg btn-primary">切换用户</a>
             </div>
         </div>
     </div>
-</div>
-</div>
+    </div>
+    </div>
 {% endblock %}
+
+

@@ -6,25 +6,14 @@
     $("#content_left").children(".c-container").each(function (id, element) {
         result_ids.push($(element).attr("id"));
     });
-{#    var start_result_id = result_ids[0];#}
-    var content_right = $("#content_right");
-{#    if (content_right == undefined){#}
-{#        content_right = document.createElement("div");#}
-{#        content_right.setAttribute("id", "content_right");#}
-{#        content_right.setAttribute("class", "cr-offset");#}
-{#        content_right.setAttribute("style", "padding-left:17px, display:block");#}
-{#        #}
-{#    }#}
-{#    content_right.setAttribute("style", "padding-left:17px, display:block");#}
+    var content_right_ = $("#content_right");
     var rrecom = $("body").children(".result-op");
     rrecom.remove();
-    content_right.empty();
+    content_right_.empty();
+    
+    content_right_.append("<div style='position:fixed'></div>")
+    var content_right = $(content_right_.children()[0])
     document.getElementById("kw").setAttribute('value', "{{ query}}");
-
-{#    $("#kw").val({{ query }});#}
-{#    content_right.append("<div style='width: 540px'><b>1. 请填写你认为在搜索过程中带来惊喜的结果的排序（本页结果序号从<em>" + start_result_id + "</em>开始依次递增，若有多个，请用空格分隔；如果没有，可以跳过这一项）</b></div><br />");#}
-{#    var serendipity = "<input type='text' name='serendipity' id='serendipity' placeholder='请在此处输入惊喜结果的排序' size='50'><br><br>";#}
-{#    content_right.append(serendipity);#}
 
     content_right.append("<div style='width: 540px'><b>1. 页面左边是搜索结果,请将你认为在搜索过程中对你有帮助的结果按照其有用性拖动至右边的相应位置;对于你没有看过的结果或者你认为对你完全没有帮助的结果,可以不用拖动. 为了帮助你更好地回忆搜索过程,我们将你点击过的结果在该结果的下方标注了出来,但这并不意味着你必须拖动它)</b></div><br />");
     for (var i = 3; i > 0; i--) {
